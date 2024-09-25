@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html data-th-replace="~{base :: parent(~{::#maindiv},~{::title},~{::script})}">
+
+<head>
+    <title>Student</title>
+</head>
+
+<body>
+<div id="maindiv" class="flex items-center justify-center mt-5">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full">
+        <h1 class="text-2xl font-bold text-center mb-6">Student Dashboard</h1>
+
+        <div class="text-center mb-4">
+            <!--        <img src="https://via.placeholder.com/150" alt="User Avatar" class="rounded-full w-24 h-24 border-2 border-gray-300">-->
+            <div class="ml-4 mt-5">
+                <h3 class="text-2xl font-medium text-gray-800" th:text="'Name:-  ' + ${studentProfile.user.name}">John Doe</h3>
+                <!--            <p class="text-gray-600" th:text="${user.email}">john.doe@example.com</p>-->
+            </div>
+        </div>
+
+        <div class="mt-4">
+            <h4 class="text-md font-semibold text-gray-700">Details:</h4>
+            <ul class="list-disc pl-5">
+                <li class="text-gray-600" th:text="'Email:-  ' + ${studentProfile.user.email}"></li>
+                <li class="text-gray-600" th:text="'User Name:-  ' + ${studentProfile.user.username}"></li>
+                <li class="text-gray-600" th:text="'Mobile No:-  ' + ${studentProfile.user.phone}"></li>
+<!--                <li class="text-gray-600" th:text="'Department:-  ' + ${studentProfile.department.name}"></li>-->
+                <li class="text-gray-600" th:text="'Year of Study:-  ' + ${studentProfile.year}"></li>
+
+            </ul>
+
+            <div class="mt-4 text-center">
+            <a th:href="@{/students/advisors/{id}(id=${studentProfile.id})}"
+               class="bg-green-500 hover:bg-green-700 text-white font-bold py-1 px-3 rounded">
+                Contact Faculty Advisors
+            </a>
+            </div>
+        </div>
+
+        <!-- student-home.html -->
+<!--        <form  th:action="@{/students/searchStudents}" method="get">-->
+<!--            <input type="text" name="name" placeholder="Search by Name" />-->
+<!--            <select name="department">-->
+<!--                <option value="">Select Department</option>-->
+<!--                &lt;!&ndash; Populate this with department options from the server &ndash;&gt;-->
+<!--                <option th:each="dept : ${departments}" th:value="${dept.id}" th:text="${dept.name}"></option>-->
+<!--            </select>-->
+<!--            <select name="year">-->
+<!--                <option value="">Select Year</option>-->
+<!--                <option value="1">Year 1</option>-->
+<!--                <option value="2">Year 2</option>-->
+<!--                <option value="3">Year 3</option>-->
+<!--                <option value="4">Year 4</option>-->
+<!--            </select>-->
+<!--            <button type="submit">Search</button>-->
+<!--        </form>-->
+
+<!--        <div id="searchResults">-->
+<!--            <ul th:if="${students != null}">-->
+<!--                <li th:each="student : ${students}">-->
+<!--                    <span th:text="${student.name}"></span> - -->
+<!--                    <span th:text="${student.department.name}"></span> - -->
+<!--                    <span th:text="${student.year}"></span>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+    </div>
+</div>
+<script></script>
+</body>
+
+</html>
