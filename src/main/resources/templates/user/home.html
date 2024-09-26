@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#maindiv},~{::title},~{::script})}" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>College Directory - Home</title>
+</head>
+
+<body>
+
+<div id="maindiv">
+
+    <!-- Hero Section -->
+    <section class="bg-[#c1e9e9] min-h-screen flex items-center">
+        <div class="container mx-auto px-6 py-12 flex flex-col lg:flex-row items-center justify-between">
+            <!-- Hero Text -->
+            <div class="lg:w-1/2 text-center lg:text-left mb-8 lg:mb-0">
+                <h1 class="font-heading font-semibold text-5xl leading-tight mb-6">Your Gateway to Campus</h1>
+                <p class="text-lg text-gray-700 mb-8">Discover and connect with students, faculty, and departments through our easy-to-navigate directory.</p>
+                <a data-th-href="@{'/user/login'}">
+                    <button class="bg-[#d1fafa] text-black font-heading px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                        Get Started
+                    </button>
+                </a>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="lg:w-1/2">
+                <img src="/images/heroimg.webp" alt="College Campus Image" class="w-full max-w-lg mx-auto lg:mx-0 items-end">
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section Ends -->
+
+    <!-- Highlights Section -->
+    <div class="flex flex-wrap justify-around items-center py-12 px-6 bg-gray-100">
+        <div class="text-center p-4">
+            <h2 class="text-3xl font-bold text-[#23b9c8]">5,000+</h2>
+            <p class="text-lg text-gray-700 mt-2">Students Connected</p>
+        </div>
+        <div class="text-center p-4">
+            <h2 class="text-3xl font-bold text-[#23b9c8]">30+</h2>
+            <p class="text-lg text-gray-700 mt-2">Departments Listed</p>
+        </div>
+        <div class="text-center p-4">
+            <h2 class="text-3xl font-bold text-[#23b9c8]">300+</</h2>
+            <p class="text-lg text-gray-700 mt-2">Faculty Profiles</p>
+        </div>
+        <div class="text-center p-4">
+            <h2 class="text-3xl font-bold text-[#23b9c8]">10+</h2>
+            <p class="text-lg text-gray-700 mt-2">Years of Experience</p>
+        </div>
+    </div>
+    <!-- Highlights Section Ends -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between px-6 space-y-8 md:space-y-0">
+
+            <!-- Contact Us Section -->
+            <div class="w-full md:w-1/3">
+                <h3 class="text-2xl font-semibold mb-4 text-[#23b9c8]">Contact Us</h3>
+                <ul class="space-y-3">
+                    <li><i class="fa-solid fa-location-dot text-[#23b9c8]"></i> <span>Main Campus, City, Country</span></li>
+                    <li><i class="fa-solid fa-phone text-[#23b9c8]"></i> <span>+1-234-567-890</span></li>
+                    <li><i class="fa-solid fa-envelope text-[#23b9c8]"></i> <span>contact@college.edu</span></li>
+                </ul>
+            </div>
+
+            <!-- Our Services Section -->
+            <div class="w-full md:w-1/3">
+                <h3 class="text-2xl font-semibold mb-4 text-[#23b9c8]">Our Services</h3>
+                <ul class="space-y-3">
+                    <li><i class="fa-solid fa-school text-[#23b9c8]"></i> <span>Comprehensive Directory</span></li>
+                    <li><i class="fa-solid fa-user-tie text-[#23b9c8]"></i> <span>Faculty Profiles</span></li>
+                    <li><i class="fa-solid fa-graduation-cap text-[#23b9c8]"></i> <span>Student Networks</span></li>
+                    <li><i class="fa-solid fa-envelope text-[#23b9c8]"></i> <span>Notifications & Alerts</span></li>
+                </ul>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="w-full md:w-1/3">
+                <h3 class="text-2xl font-semibold mb-4 text-[#23b9c8]">Quick Links</h3>
+                <ul class="space-y-3">
+                    <li><a href="/about" class="hover:text-[#23b9c8] transition">About Us</a></li>
+                    <li><a href="/services" class="hover:text-[#23b9c8] transition">Services</a></li>
+                    <li><a href="/contact" class="hover:text-[#23b9c8] transition">Contact</a></li>
+                    <li><a href="/support" class="hover:text-[#23b9c8] transition">Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Social Media & Copyright -->
+        <div class="mt-10 border-t border-gray-700 pt-6">
+            <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2024 College Directory. All rights reserved.</p>
+
+                <!-- Social Media Icons -->
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-[#23b9c8] transition"><i class="fab fa-facebook text-xl"></i></a>
+                    <a href="#" class="hover:text-[#23b9c8] transition"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="#" class="hover:text-[#23b9c8] transition"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="#" class="hover:text-[#23b9c8] transition"><i class="fab fa-instagram text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer Ends -->
+
+</div>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script data-th-src="@{'/js/script.js'}"></script>
+</body>
+
+</html>

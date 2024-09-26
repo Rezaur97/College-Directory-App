@@ -47,6 +47,12 @@ public class UserController {
         return "user/loginpage";
     }
 
+    @GetMapping("/home")
+    public String loadHomePage(){
+        return "user/home";
+    }
+
+
     @PostConstruct
     public void initializeRoleList() {
         allRoles = roleService.getAllRoles();
