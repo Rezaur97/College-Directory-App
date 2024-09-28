@@ -37,7 +37,6 @@ public class UserServicesImpl implements UserServices {
     public UserServicesImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
-
     @Override
     public UserDto saveUser(UserDto dto) {
         Users user = mapToEntity(dto);
@@ -48,23 +47,23 @@ public class UserServicesImpl implements UserServices {
         Users saved = userRepository.save(user);
 
         // Save profile based on role
-        switch (saved.getRole().getRoleName().toLowerCase()) {
-            case "student":
-                System.out.println("Saving studentProfile... switch case - " + saved.getRole().getRoleName().toLowerCase());
+        switch (saved.getRole().getRoleName()) { // No need to convert to lowercase anymore
+            case STUDENT:
+                System.out.println("Saving studentProfile... switch case - " + saved.getRole().getRoleName());
                 StudentProfile studentProfile = new StudentProfile();
                 studentProfile.setUser(saved);
                 studentProfileRepository.save(studentProfile);
                 break;
-            case "administrator":
-                System.out.println("Saving administratorProfile... switch case - " + saved.getRole().getRoleName().toLowerCase());;
+            case ADMINISTRATOR:
+                System.out.println("Saving administratorProfile... switch case - " + saved.getRole().getRoleName());
                 AdministratorProfile adminProfile = new AdministratorProfile();
                 adminProfile.setUser(saved);
                 adminProfileRepository.save(adminProfile);
                 break;
-            case "faculty_member":
-                System.out.println("saving facultyProfile .... switch case");
+            case FACULTY_MEMBER:
+                System.out.println("Saving facultyProfile... switch case - " + saved.getRole().getRoleName());
                 FacultyProfile facultyProfile = new FacultyProfile();
-                facultyProfile.setUser(user);
+                facultyProfile.setUser(saved);
                 facultyProfileRepository.save(facultyProfile);
                 break;
             default:
