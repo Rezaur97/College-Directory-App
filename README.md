@@ -3,7 +3,7 @@ College Directory Management System
 
 # Overview
 The College Directory Management System is a web-based application that streamlines and automates the management of student, faculty, and department information for educational institutions. The system employs role-based access control (RBAC), ensuring secure and appropriate access to functionality depending on whether the user is a student, faculty member, or administrator.
-Features
+# Features
 # Student Interface:
 1. View Personal Profile: Students can view their profile details such as personal information, academic courses, and grades.
 2. Faculty Advisor Access: Students can contact their assigned faculty advisors through the system, based on their course enrollments.
