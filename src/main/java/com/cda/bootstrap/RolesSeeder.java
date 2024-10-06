@@ -16,7 +16,6 @@ import java.util.Optional;
 public class RolesSeeder implements ApplicationListener<ContextRefreshedEvent> {
     private final RoleRepository roleRepository;
 
-
     public RolesSeeder(RoleRepository roleRepository) {
         this.roleRepository = roleRepository;
     }
