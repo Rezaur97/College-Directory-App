@@ -32,8 +32,6 @@ public class AdminController {
     @Autowired
     private ModelMapper mapper;
 
-    //--------------------------
-    //--------branch
 
     @RequestMapping("/home")
     public String adminPage(Principal principal, Model model) {
